@@ -1,0 +1,12 @@
+hours=float(input('Enter how many hours per day you study: '))
+#validate
+while hours>24 or hours<0:                                                                  #the maximum hours in a day are 24, while the input is greater than 24 or less than zero, call a lie.
+    print('invalid! STOP YOUR LYING')                                                       #Lie is called, because there's only 24 hours in a day and you can't study negativly. 
+    hours=float(input("Enter how many hours per day you studied 0-24:"))                    #asks to enter something that works
+                                                                                            #reacts to correct input depending on the number range
+if hours>3:
+    print("Awesome")
+elif hours>1:
+    print("Good")
+else:
+    print("okay")
