@@ -1,0 +1,33 @@
+print("The Door Opens Slowly and The Void Calls You Forward..")
+print("~~~~~~~~~~~~~Explore the following rooms~~~~~~~~~~~~~")
+print("~~~~~~~~1 - Bedroom, 2 - Kitchen, 3 - Dungeon~~~~~~~~")
+room=int(input("Choose Your Fate:"))
+hours=0
+while room<5:
+    if room==1:
+        hours+=1
+        print("You have entered the bedroom...")
+        print("It smells horrible in here, there's dust everywhere and the floor is creaking")
+        print("You have been in this room for", hours, "hours")
+        room=int(input("Do you want to leave? Hit 5 or Choose Another Room Number, num <=5 will exit: "))
+    elif room==2:
+        hours+=1
+        print("You have entered the kitchen...")
+        print("There's a smell of rot coming from the fridge, you feel the urge to open it, but save yourself the trauma of what lies behind that door")
+        print("You have been in this room for", hours, "hours")
+        room=int(input("Do you want to leave? Hit 5 or Choose Another Room Number, num <=5 will exit: "))
+    elif room==3:
+        hours+=1
+        print("You have entered The Dungeon...Why are you even down here? Do you not watch horror movies...?")
+        print("There is a smell of decay coming from the walls, there's gored bones near the back corner...you should get the move on...")
+        print("You have been in this room for", hours, "hours")
+        room=int(input("Do you want to leave? Hit 5 or Choose Another Room Number num <=5 will exit: "))
+    else:
+        print("You wonder aimlessly accumulating more time, that room does not exist")
+        hours+=1
+        print("You have been in this room for", hours, "hours")
+        room=int(input("Hit 5 To Exit The House or Choose another room number, num <5 will exit: "))
+        
+        
+        #This is a simple text game that reacts to a user's input of 1 - 4, anything over exits. 4, is a waste of time with a punishment of time accumulation.
+        
