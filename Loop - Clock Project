@@ -1,0 +1,4 @@
+#Clock simulator
+for hours in range(0,13):  #Takes hours in range from 0 to 12
+    for minutes in range (0,61): #Takes minutes in range from 0 to 60
+        print('time', hours, 'minutes', minutes) #Loops until range paramaters are satisfied.
