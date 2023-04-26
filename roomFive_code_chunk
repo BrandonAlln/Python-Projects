@@ -1,0 +1,92 @@
+#Room Five Initiates Room 5 And initializes the variables from main
+
+def roomFive(items, hitpoints, location, name):
+  #looks to see if final boss key is in the items list
+  
+  if '#FINAL BOSS KEY HERE' in items:
+    #changes the location variable to putrid marsh
+    location = 'putrid marsh'
+    print("Welcome to the fifth ring of hell. This room is the,", location)
+    print(
+      "Your best advised to look for everything in this room to   enter the boss room..."
+    )
+    #while loop initializer
+    
+    userChoice = ''
+    
+    #while loop that allows users to move about freely
+    
+    while userChoice != exit:
+      print("Your Directions: 'north', 'south', 'east', 'west', 'save' 'exit'")
+      userChoice = input(">>>: ")
+      
+      if userChoice == 'north':
+        
+        #adds Satans Bane power up to list
+        items.append('Satans_Bane')
+        print("You have obtained Satans_Bane, your current items are", items)
+        
+      #exits the program and userChoice ends
+      elif userChoice == 'exit':
+        print("Exiting program...")
+        userChoice == True
+        
+      #saves the game and calls for save(pickle) to convert items to binary.
+      elif userChoice == 'save':
+        save(items, hitpoints, location, name)
+        pass
+        
+      #adds draconic claw power up to items list
+      elif userChoice == 'south':
+        items.append('Draconic_Claw')
+        
+        #increases hitpoints for final boss fight
+        hitpoints += 10000
+        
+        #shows player stats
+        print("your hitpoints are now", hitpoints,
+              "You have obtained a boost...draconic claw...")
+      #input east option
+      elif userChoice == 'east':
+        #adds item to list
+        items.append("God's_Tear")
+        
+        print("You have obtained the item....God's Tear")
+
+        #shows item in the list
+        print("Your items are now...", items)
+
+      
+      #conditional statment for last room checks for all needed items in list to enter the room
+      elif userChoice == 'west' and 'Boss_Key' in items and 'Satans_Bane' in items:
+        print("Hopefully You Got Everything You Needed....")
+        print("Goodluck")
+        print("\n",name)
+        return items, hitpoints, location, name
+
+      #handles invalid input
+      else:
+        print("Invalid Input...or lacking items")
+  
+  #handles insufficent requirements
+  else:
+    print(
+      "Final Boss Key Not In Items, You Will Not Be Able To Progress...")
+    testVar = input(">>>:")
+    print(testVar)
+
+#saves game state
+def save(items, hitpoints, location, name):
+
+
+def main():
+  run = True
+  items = ['test_item']
+  hitpoints = 100
+  location = 'test location'
+  name = 'test name'
+  while run == True:
+    roomFive(items, hitpoints, location, name)
+
+
+main()
