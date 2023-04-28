@@ -1,3 +1,8 @@
+#This is my final python project as of 4/27/23
+#Theme - Dante's Inferno / The Divine Comedy
+
+
+
 #all needed imports
 import pickle
 import time
