@@ -764,6 +764,68 @@ def main():
         elif menu_selection == '2':
 
             items,hitpoints,location,name = load_game(items,hitpoints,location,name)
+            if location == '':
+                items,hitpoints,location,name = roomOne(items,hitpoints,location,name)
+
+                items, hitpoints, location, name = questionOne(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomTwo(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomThree(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomFour(items, hitpoints, location, name)
+
+                items, hitpoints, location, name= roomFive(items, hitpoints, location, name)
+
+                items,hitpoints,location,name = Satan(items,hitpoints,location,name)
+            #checks for load location variable to corresponding room
+            elif location == 'questionOne' and 'Holy_Sigil' in items:
+                items, hitpoints, location, name = questionOne(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomTwo(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomThree(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomFour(items, hitpoints, location, name)
+
+                items, hitpoints, location, name= roomFive(items, hitpoints, location, name)
+
+                items,hitpoints,location,name = Satan(items,hitpoints,location,name)
+            #checks for load location variable to corresponding room
+            elif location == 'roomTwo':
+                items, hitpoints, location, name = roomTwo(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomThree(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomFour(items, hitpoints, location, name)
+
+                items, hitpoints, location, name= roomFive(items, hitpoints, location, name)
+
+                items,hitpoints,location,name = Satan(items,hitpoints,location,name)
+            #checks for load location variable to corresponding room
+            elif location == 'Gluttony':
+                items, hitpoints, location, name = roomThree(items, hitpoints, location, name)
+
+                items, hitpoints, location, name = roomFour(items, hitpoints, location, name)
+
+                items, hitpoints, location, name= roomFive(items, hitpoints, location, name)
+
+                items,hitpoints,location,name = Satan(items,hitpoints,location,name)
+            #checks for load location variable to corresponding room
+            elif location == 'avarice':
+                items, hitpoints, location, name = roomFour(items, hitpoints, location, name)
+
+                items, hitpoints, location, name= roomFive(items, hitpoints, location, name)
+
+                items,hitpoints,location,name = Satan(items,hitpoints,location,name)
+            #checks for load location variable to corresponding room
+            elif location == 'roomFive':
+                items, hitpoints, location, name= roomFive(items, hitpoints, location, name)
+
+                items,hitpoints,location,name = Satan(items,hitpoints,location,name)
+            #checks for load location variable to corresponding room
+            elif location == 'Satan':
+                items,hitpoints,location,name = Satan(items,hitpoints,location,name)
         
         #game start from scratch or load state optional, checks for proper location in data folder to initiate correct room sequence.
         elif menu_selection == '3':
